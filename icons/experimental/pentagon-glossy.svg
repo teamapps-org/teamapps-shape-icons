@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="120mm"
+   height="120mm"
+   viewBox="0 0 120 120"
+   version="1.1"
+   id="svg5"
+   sodipodi:docname="pentagon-glossy.svg"
+   inkscape:version="1.1.2 (76b9e6a115, 2022-02-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#999999"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="true"
+     inkscape:zoom="0.068740913"
+     inkscape:cx="2953.1176"
+     inkscape:cy="-1432.9167"
+     inkscape:window-width="3840"
+     inkscape:window-height="2096"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1">
+    <inkscape:grid
+       type="xygrid"
+       id="grid31"
+       empspacing="3"
+       units="mm"
+       spacingx="10"
+       spacingy="10" />
+  </sodipodi:namedview>
+  <defs
+     id="defs2">
+    <filter
+       style="color-interpolation-filters:sRGB;"
+       inkscape:label="Specular Light"
+       id="filter5963"
+       x="-0.051818797"
+       y="-0.054485508"
+       width="1.1036376"
+       height="1.108971">
+      <feGaussianBlur
+         in="SourceAlpha"
+         stdDeviation="7.76104"
+         result="blur"
+         id="feGaussianBlur5953" />
+      <feSpecularLighting
+         in="blur"
+         specularExponent="25"
+         specularConstant="0.959795"
+         surfaceScale="10"
+         lighting-color="rgb(255,255,255)"
+         result="specular"
+         id="feSpecularLighting5957">
+        <feDistantLight
+           elevation="43"
+           azimuth="230"
+           id="feDistantLight5955" />
+      </feSpecularLighting>
+      <feComposite
+         in="specular"
+         in2="SourceGraphic"
+         k3="1"
+         k2="1"
+         operator="arithmetic"
+         result="composite1"
+         id="feComposite5959" />
+      <feComposite
+         in="composite1"
+         in2="SourceAlpha"
+         operator="in"
+         result="composite2"
+         id="feComposite5961" />
+    </filter>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       sodipodi:type="star"
+       style="fill:#ff0000;fill-rule:evenodd;fill-opacity:1;filter:url(#filter5963)"
+       id="path112"
+       inkscape:flatsided="true"
+       sodipodi:sides="5"
+       sodipodi:cx="226.77165"
+       sodipodi:cy="226.77165"
+       sodipodi:r1="188.97638"
+       sodipodi:r2="152.8851"
+       sodipodi:arg1="-1.5707963"
+       sodipodi:arg2="-0.9424778"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="M 226.77166,37.795273 406.49887,168.37474 337.84918,379.65676 115.69412,379.65675 47.044437,168.37473 Z"
+       transform="scale(0.26458333)"
+       inkscape:transform-center-y="-4.7745758" />
+  </g>
+</svg>

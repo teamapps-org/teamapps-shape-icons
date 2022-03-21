@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Created with Inkscape (http://www.inkscape.org/) --><svg xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" height="120mm" id="svg5" version="1.1" viewBox="0 0 120 120" width="120mm">
+    <defs id="defs2"/>
+    <g id="layer1">
+        <path d="m 60,10 43.301,25 0,50 -43.301,25 -43.301,-25 0,-50 z" id="shape" style="fill:@fillColor@;stroke-width:@strokeWidth@;filter:@filter@;stroke:@strokeColor@;transform-origin:center;transform:@transform@"/>
+    </g>
+    <defs>
+        <filter height="1.204" id="shadow" style="color-interpolation-filters:sRGB;" width="1.204" x="-0.097" y="-0.097">
+            <feFlood flood-color="rgb(0,0,0)" flood-opacity="0.603922" id="feFlood1703" result="flood"/>
+            <feComposite id="feComposite1705" in="flood" in2="SourceGraphic" operator="in" result="composite1"/>
+            <feGaussianBlur id="feGaussianBlur1707" in="composite1" result="blur" stdDeviation="3"/>
+            <feOffset dx="1" dy="1" id="feOffset1709" result="offset"/>
+            <feComposite id="feComposite1711" in="SourceGraphic" in2="offset" operator="over" result="composite2"/>
+        </filter>
+    </defs>
+</svg>
