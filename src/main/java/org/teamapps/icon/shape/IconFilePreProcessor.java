@@ -31,46 +31,44 @@ public class IconFilePreProcessor {
 			DocumentBuilder builder = factory.newDocumentBuilder();
 			Document doc = builder.parse(icon);
 
-			Node valueElement = doc.importNode(builder.parse(new InputSource(new StringReader("""
-					<defs>
-					    <filter
-					       style="color-interpolation-filters:sRGB;"
-					       inkscape:label="Drop Shadow"
-					       id="shadow"
-					       x="-0.097"
-					       y="-0.097"
-					       width="1.204"
-					       height="1.204">
-					      <feFlood
-					         flood-opacity="0.603922"
-					         flood-color="rgb(0,0,0)"
-					         result="flood"
-					         id="feFlood1703" />
-					      <feComposite
-					         in="flood"
-					         in2="SourceGraphic"
-					         operator="in"
-					         result="composite1"
-					         id="feComposite1705" />
-					      <feGaussianBlur
-					         in="composite1"
-					         stdDeviation="3"
-					         result="blur"
-					         id="feGaussianBlur1707" />
-					      <feOffset
-					         dx="1"
-					         dy="1"
-					         result="offset"
-					         id="feOffset1709" />
-					      <feComposite
-					         in="SourceGraphic"
-					         in2="offset"
-					         operator="over"
-					         result="composite2"
-					         id="feComposite1711" />
-					    </filter>
-					  </defs>
-					"""))).getDocumentElement(), true);
+			Node valueElement = doc.importNode(builder.parse(new InputSource(new StringReader("<defs>\n" +
+																							  "    <filter\n" +
+																							  "       style=\"color-interpolation-filters:sRGB;\"\n" +
+																							  "       inkscape:label=\"Drop Shadow\"\n" +
+																							  "       id=\"shadow\"\n" +
+																							  "       x=\"-0.097\"\n" +
+																							  "       y=\"-0.097\"\n" +
+																							  "       width=\"1.204\"\n" +
+																							  "       height=\"1.204\">\n" +
+																							  "      <feFlood\n" +
+																							  "         flood-opacity=\"0.603922\"\n" +
+																							  "         flood-color=\"rgb(0,0,0)\"\n" +
+																							  "         result=\"flood\"\n" +
+																							  "         id=\"feFlood1703\" />\n" +
+																							  "      <feComposite\n" +
+																							  "         in=\"flood\"\n" +
+																							  "         in2=\"SourceGraphic\"\n" +
+																							  "         operator=\"in\"\n" +
+																							  "         result=\"composite1\"\n" +
+																							  "         id=\"feComposite1705\" />\n" +
+																							  "      <feGaussianBlur\n" +
+																							  "         in=\"composite1\"\n" +
+																							  "         stdDeviation=\"3\"\n" +
+																							  "         result=\"blur\"\n" +
+																							  "         id=\"feGaussianBlur1707\" />\n" +
+																							  "      <feOffset\n" +
+																							  "         dx=\"1\"\n" +
+																							  "         dy=\"1\"\n" +
+																							  "         result=\"offset\"\n" +
+																							  "         id=\"feOffset1709\" />\n" +
+																							  "      <feComposite\n" +
+																							  "         in=\"SourceGraphic\"\n" +
+																							  "         in2=\"offset\"\n" +
+																							  "         operator=\"over\"\n" +
+																							  "         result=\"composite2\"\n" +
+																							  "         id=\"feComposite1711\" />\n" +
+																							  "    </filter>\n" +
+																							  "</defs>\n"))).getDocumentElement(), true);
 			doc.getDocumentElement().appendChild(valueElement);
 
 			var nodeList = (NodeList) XPathFactory.newInstance().newXPath().compile("//*").evaluate(doc, XPathConstants.NODESET);
@@ -97,19 +95,17 @@ public class IconFilePreProcessor {
 
 
 			TransformerFactory transformerFactory = TransformerFactory.newInstance();
-			Transformer transformer = transformerFactory.newTransformer(new StreamSource(new StringReader("""
-									<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-									  <xsl:output indent="yes"/>
-									  <xsl:strip-space elements="*"/>
-									
-									  <xsl:template match="@*|node()">
-										<xsl:copy>
-										  <xsl:apply-templates select="@*|node()"/>
-										</xsl:copy>
-									  </xsl:template>
-									
-									</xsl:stylesheet>
-					""")));
+			Transformer transformer = transformerFactory.newTransformer(new StreamSource(new StringReader("<xsl:stylesheet version=\"1.0\" xmlns:xsl=\"http://www.w3.org/1999/XSL/Transform\">\n" +
+																										  "  <xsl:output indent=\"yes\"/>\n" +
+																										  "  <xsl:strip-space elements=\"*\"/>\n" +
+																										  "\n" +
+																										  "  <xsl:template match=\"@*|node()\">\n" +
+																										  "	<xsl:copy>\n" +
+																										  "	  <xsl:apply-templates select=\"@*|node()\"/>\n" +
+																										  "	</xsl:copy>\n" +
+																										  "  </xsl:template>\n" +
+																										  "\n" +
+																										  "</xsl:stylesheet>\n")));
 			DOMSource source = new DOMSource(doc);
 			FileWriter writer = new FileWriter("src/main/resources/org/teamapps/icon/shape/" + icon.getName());
 			StreamResult result = new StreamResult(writer);
