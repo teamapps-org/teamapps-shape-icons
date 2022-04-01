@@ -4,7 +4,7 @@
 
     <groupId>org.teamapps</groupId>
     <artifactId>teamapps-shape-icons</artifactId>
-    <version>1.0.3</version>
+    <version>1.0.4-SNAPSHOT</version>
 
     <name>TeamApps Shape Icon Library</name>
     <description>TeamApps Shape Icon Library</description>
@@ -48,7 +48,7 @@
         <url>https://github.com/teamapps-org/teamapps-shape-icons</url>
         <connection>scm:git:git@github.com:teamapps-org/teamapps-shape-icons.git</connection>
         <developerConnection>scm:git:git@github.com:teamapps-org/teamapps-shape-icons.git</developerConnection>
-        <tag>v1.0.3</tag>
+        <tag>HEAD</tag>
     </scm>
 
     <dependencies>
