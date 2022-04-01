@@ -40,6 +40,7 @@ class ShapeIconTest {
 					.setScaling(.5f)
 					.build());
 			String encoded = new ShapeIconEncoder().encodeIcon(icon, icon1 -> null);
+			System.out.println(encoded);
 			ShapeIcon decodedIcon = new ShapeIconDecoder().decodeIcon(encoded, qualifiedEncodedIcon -> null);
 			IconResource iconResource = new ShapeIconLoader().loadIcon(decodedIcon, 24, (icn, ctx) -> null);
 			FileUtils.writeByteArrayToFile(new File(decodedIcon.getIconName() + ".svg"), iconResource.getBytes());

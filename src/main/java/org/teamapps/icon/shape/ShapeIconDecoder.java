@@ -49,8 +49,8 @@ public class ShapeIconDecoder implements IconDecoder<ShapeIcon> {
 		HashMap<String, String> parameterKeyValue = extractStyleParameterStrings(encodedStyleString);
 
 		var styleBuilder = ShapeIconStyle.builder();
-		String fillColorString = parameterKeyValue.get(FILL_COLOR);if (fillColorString != null) { styleBuilder = styleBuilder.setFillColor(Color.fromHex(fillColorString)); }
-		String strokeColorString = parameterKeyValue.get(STROKE_COLOR);if (strokeColorString != null) { styleBuilder = styleBuilder.setStrokeColor(Color.fromHex(strokeColorString)); }
+		String fillColorString = parameterKeyValue.get(FILL_COLOR);if (fillColorString != null) { styleBuilder = styleBuilder.setFillColor(Color.fromHtmlString(fillColorString)); }
+		String strokeColorString = parameterKeyValue.get(STROKE_COLOR);if (strokeColorString != null) { styleBuilder = styleBuilder.setStrokeColor(Color.fromHtmlString(strokeColorString)); }
 		String strokeWidthString = parameterKeyValue.get(STROKE_WIDTH);if (strokeWidthString != null) { styleBuilder = styleBuilder.setStrokeWidth(Float.parseFloat(strokeWidthString)); }
 		String shadowString = parameterKeyValue.get(SHADOW);if (shadowString != null) { styleBuilder = styleBuilder.setShadow(Boolean.parseBoolean(shadowString)); }
 		String scalingString = parameterKeyValue.get(SCALING);if (scalingString != null) { styleBuilder = styleBuilder.setScaling(Float.parseFloat(scalingString)); }
